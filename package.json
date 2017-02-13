@@ -16,8 +16,6 @@
     "url": "https://github.com/epeli/react-simple/issues"
   },
   "files": [
-    "babel.js",
-    "babel-plugin",
     "lib"
   ],
   "author": "Esa-Matti Suuronen",
@@ -41,6 +39,7 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
+    "babel-plugin-display-name-custom": "^0.1.0",
     "classnames": "^2.2.5",
     "deepmerge": "^1.3.2",
     "glamor": "^2.20.22",

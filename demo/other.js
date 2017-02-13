@@ -9,4 +9,4 @@ export const Blue = foo("div", {
 });
 
 
-const Rikki = simple();
+const NotAComponent = simple();
