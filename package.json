@@ -16,6 +16,7 @@
     "url": "https://github.com/epeli/react-simple/issues"
   },
   "files": [
+    "babel.js",
     "lib"
   ],
   "author": "Esa-Matti Suuronen",
