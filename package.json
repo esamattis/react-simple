@@ -1,7 +1,7 @@
 {
   "name": "react-simple",
   "version": "0.0.5",
-  "description": "Simple style only components for React",
+  "description": "simple style only components for react",
   "main": "./lib/simple",
   "scripts": {
     "test": "eslint src/ && jest",

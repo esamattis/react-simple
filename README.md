@@ -1,6 +1,6 @@
 # react-simple
 
-Simple style only components for React.
+simple style only components for react
 
 Install
 
