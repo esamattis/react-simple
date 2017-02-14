@@ -54,7 +54,7 @@ The css-in-js engine is [glamor][] which means following features:
 
 - automatic vendor prefixes
 - pseudo :classes/::elements
-- `@media` queries
+- media queries
 - css animations
 - server side rendering
 - and more: checkout the [glamor docs][glamor]
@@ -85,5 +85,21 @@ The use it add `react-simple/babel` to your `.babelrc`
 }
 ```
 
+In practice this means that instead of
 
+![default](https://raw.githubusercontent.com/epeli/react-simple/master/demo/assets/simple-default.png)
 
+you will get
+
+![default](https://raw.githubusercontent.com/epeli/react-simple/master/demo/assets/simple-babel.png)
+
+as you can see it will also add class names corresponding the component names
+so even without the React specfic devtools you will get better insights
+
+![default](https://raw.githubusercontent.com/epeli/react-simple/master/demo/assets/simple-dom.png)
+
+You can see live at https://epeli.github.io/react-simple/
+
+This feature is powered by [babel-plugin-display-name-custom][].
+
+[babel-plugin-display-name-custom]: https://github.com/epeli/babel-plugin-display-name-custom
