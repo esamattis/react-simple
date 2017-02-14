@@ -100,4 +100,5 @@ export const View = simple("div", viewStyles);
 View.displayName = "View";
 
 
+export {css};
 export default simple;
