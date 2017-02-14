@@ -55,3 +55,28 @@ The css-in-js engine is [glamor][] which means following features:
 glamor `css`function can be imported with `import {css} from "react-simple"` if required
 
 [glamor]: https://github.com/threepointone/glamor
+
+# Babel Plugin
+
+> This it totally optional!
+
+By default components created using `simple` do not get proper component name
+which means they won't get very helpful names in [React Developer Tools][devtools].
+This can be mitigated using the bundled `react-simple/babel` Babel plugin which infers
+the componetn names from the variable declarations.
+
+[devtools]: https://github.com/facebook/react-devtools
+
+The use it add `react-simple/babel` to your `.babelrc`
+
+```json
+{
+    "presets": ["es2015", "react"],
+    "plugins": [
+        "react-simple/babel"
+    ]
+}
+```
+
+
+
