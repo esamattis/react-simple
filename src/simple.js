@@ -45,7 +45,7 @@ function simple(Component, styles, alts = {}, options = {}) {
         rules[key] = css(deepmerge(styles, alts[key]));
     }
 
-    function StyleWrapped({className, ...otherProps}) {
+    function Simple({className, ...otherProps}) {
         const passProps = omit(altProps, otherProps);
         const alt = Object.keys(pickTruthty(pick(altProps, otherProps)));
 
@@ -58,7 +58,7 @@ function simple(Component, styles, alts = {}, options = {}) {
         const props = {
             ...passProps,
             className: cn(
-                makeDebugClass(StyleWrapped.displayName),
+                makeDebugClass(Simple.displayName),
                 makeDebugClass(alt[0]),
                 className,
                 String(rule),
@@ -68,17 +68,17 @@ function simple(Component, styles, alts = {}, options = {}) {
         return <Component {...props} />;
     }
 
-    StyleWrapped._styleWrapped = {
+    Simple._styleWrapped = {
         Component,
         styles,
         alts,
     };
 
-    StyleWrapped.displayName = "simple(" + getDisplayName(Component) + ")";
+    Simple.displayName = "simple(" + getDisplayName(Component) + ")";
 
-    StyleWrapped.create = el => simple(el, styles, alts);
+    Simple.create = el => simple(el, styles, alts);
 
-    return StyleWrapped;
+    return Simple;
 }
 
 const viewStyles = {
