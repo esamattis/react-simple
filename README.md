@@ -98,7 +98,7 @@ so even without the React specfic devtools you will get better insights
 
 ![default](https://raw.githubusercontent.com/epeli/react-simple/master/demo/assets/simple-dom.png)
 
-You can see live at https://epeli.github.io/react-simple/
+You can see this live at https://epeli.github.io/react-simple/
 
 This feature is powered by [babel-plugin-display-name-custom][].
 
