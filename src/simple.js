@@ -7,6 +7,7 @@ import pickBy from "lodash/fp/pickBy";
 import deepmerge from "deepmerge";
 
 const pickTruthty = pickBy(Boolean);
+const defaultNamePat = /^simple\(.*\)/;
 
 function getDisplayName(Component) {
     if (typeof Component === "string") {
@@ -20,7 +21,8 @@ var compnentCounter = 0;
 
 function simple(Component, styles, alts = {}, options = {}) {
     const num = compnentCounter++;
-    const makeDebugClass = className => className ? className + "___" + num : null;
+    const makeDebugClass = className =>
+        className && !defaultNamePat.test(className) ? className + "___" + num : null;
 
     const level = options._level || 0;
 
