@@ -18,11 +18,9 @@ function getDisplayName(Component) {
 
 var compnentCounter = 0;
 
-function simple(Component, styles, alts={}, options={}) {
+function simple(Component, styles, alts = {}, options = {}) {
     const num = compnentCounter++;
-    const makeDebugClass = className => className
-            ? className + "___" + num
-            : null;
+    const makeDebugClass = className => className ? className + "___" + num : null;
 
     const level = options._level || 0;
 
@@ -33,7 +31,7 @@ function simple(Component, styles, alts={}, options={}) {
             deepmerge(Component._styleWrapped.alts, alts),
             {
                 _level: level + 1,
-            }
+            },
         );
     }
 
@@ -41,16 +39,13 @@ function simple(Component, styles, alts={}, options={}) {
 
     const altProps = Object.keys(alts);
 
-
     for (let key in alts) {
         rules[key] = css(deepmerge(styles, alts[key]));
     }
 
     function StyleWrapped({className, ...otherProps}) {
-
         const passProps = omit(altProps, otherProps);
         const alt = Object.keys(pickTruthty(pick(altProps, otherProps)));
-
 
         if (alt.length > 1) {
             throw new Error("Too many alt props: " + alt.join(", "));
@@ -58,10 +53,14 @@ function simple(Component, styles, alts={}, options={}) {
 
         const rule = rules[alt[0] || "__base"];
 
-
         const props = {
             ...passProps,
-            className: cn(makeDebugClass(StyleWrapped.displayName), makeDebugClass(alt[0]), className, String(rule)),
+            className: cn(
+                makeDebugClass(StyleWrapped.displayName),
+                makeDebugClass(alt[0]),
+                className,
+                String(rule),
+            ),
         };
 
         return <Component {...props} />;
@@ -77,10 +76,8 @@ function simple(Component, styles, alts={}, options={}) {
 
     StyleWrapped.create = el => simple(el, styles, alts);
 
-
     return StyleWrapped;
 }
-
 
 const viewStyles = {
     boxSizing: "border-box",
@@ -98,7 +95,6 @@ const viewStyles = {
 
 export const View = simple("div", viewStyles);
 View.displayName = "View";
-
 
 export {css};
 export default simple;
