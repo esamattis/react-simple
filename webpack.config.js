@@ -6,7 +6,7 @@ var config = {
     output: {
         path: __dirname + "/demo/dist",
         filename: "bundle.js",
-        publicPath: "/",
+        publicPath: "/demo/dist",
     },
     // devtool: "cheap-module-eval-source-map", // faster
     devtool: "sourceMap",
@@ -30,6 +30,5 @@ var config = {
         }),
     ],
 };
-
 
 module.exports = config;

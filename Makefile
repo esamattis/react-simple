@@ -18,8 +18,3 @@ server:
 js-server:
 	webpack-dev-server -d --inline --host 0.0.0.0
 	
-
-js-watch:
-	webpack -d --progress --watch
-
-
