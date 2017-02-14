@@ -2,11 +2,11 @@
 
 simple style only components for react
 
-Install
+install
 
     yarn add react-simple  
 
-Usage
+usage
 
 ```js
 import simple from "react-simple";
@@ -59,11 +59,11 @@ The css-in-js engine is [glamor][] which means following features:
 - server side rendering
 - and more: checkout the [glamor docs][glamor]
 
-glamor `css`function can be imported with `import {css} from "react-simple"` if required
+glamor `css`function can be imported with `import {css} from "react-simple"` when needed
 
 [glamor]: https://github.com/threepointone/glamor
 
-# Babel Plugin
+# babel plugin
 
 > This is totally optional!
 
@@ -93,12 +93,14 @@ you will get
 
 ![default](https://raw.githubusercontent.com/epeli/react-simple/master/demo/assets/simple-babel.png)
 
-as you can see it will also add class names corresponding the component names
+it will also add class names corresponding the component names
 so even without the React specfic devtools you will get better insights
 
 ![default](https://raw.githubusercontent.com/epeli/react-simple/master/demo/assets/simple-dom.png)
 
-You can see this live at https://epeli.github.io/react-simple/ Source code is under `demo/`.
+You can see this live at https://epeli.github.io/react-simple/ 
+
+Source code is under `demo/`.
 
 This feature is powered by [babel-plugin-display-name-custom][].
 
