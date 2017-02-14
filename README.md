@@ -23,6 +23,13 @@ const RedButtonWithPadding = simple(Button, {
 });
 
 
+// reuse styles for different component types
+const LinkWithPadding = simple(Button.create("a"), {
+    textDecoration: "none",
+});
+// <LinkWithPadding href="/link">link</LinkWithPadding>
+
+
 // simple style toggles
 const Button = simple("button", {
     padding: 10,
