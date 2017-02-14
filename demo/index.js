@@ -66,6 +66,9 @@ const Link = simple(Text.create("a"), {
     color: shade1,
     textAlign: "center",
     width: 80,
+    ":hover": {
+        backgroundColor: shade0,
+    },
 });
 
 const Row = simple(View, {
