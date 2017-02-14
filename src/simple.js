@@ -19,21 +19,16 @@ function getDisplayName(Component) {
 
 var compnentCounter = 0;
 
-function simple(Component, styles, alts = {}, options = {}) {
+function simple(Component, styles, alts = {}) {
     const num = compnentCounter++;
     const makeDebugClass = className =>
         className && !defaultNamePat.test(className) ? className + "___" + num : null;
-
-    const level = options._level || 0;
 
     if (Component._styleWrapped) {
         return simple(
             Component._styleWrapped.Component,
             deepmerge(Component._styleWrapped.styles, styles),
             deepmerge(Component._styleWrapped.alts, alts),
-            {
-                _level: level + 1,
-            },
         );
     }
 
