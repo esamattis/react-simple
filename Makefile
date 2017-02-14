@@ -18,3 +18,6 @@ server:
 js-server:
 	webpack-dev-server -d --inline --host 0.0.0.0
 	
+commit-dist:
+	$(MAKE) js
+	git commit demo/dist/bundle.js -m "commit demo bundle"
