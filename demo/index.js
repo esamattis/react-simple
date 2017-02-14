@@ -64,6 +64,16 @@ const Link = simple(Text.create("a"), {
     fontSize: 20,
     backgroundColor: shade2,
     color: shade1,
+    textAlign: "center",
+    width: 80,
+});
+
+const Row = simple(View, {
+    flexDirection: "row",
+});
+
+const Sep = simple(View, {
+    width: 10,
 });
 
 const Root = () => (
@@ -75,7 +85,11 @@ const Root = () => (
             </Description>
             <Code title="<Button>click</Button>">{code}</Code>
 
-            <Link href="https://github.com/epeli/react-simple">github</Link>
+            <Row>
+                <Link href="https://github.com/epeli/react-simple">github</Link>
+                <Sep />
+                <Link href="https://www.npmjs.com/package/react-simple">npm</Link>
+            </Row>
         </Box>
     </Container>
 );
