@@ -58,7 +58,7 @@ glamor `css`function can be imported with `import {css} from "react-simple"` if 
 
 # Babel Plugin
 
-> This it totally optional!
+> This is totally optional!
 
 By default components created using `simple` do not get proper component name
 which means they won't get very helpful names in [React Developer Tools][devtools].
