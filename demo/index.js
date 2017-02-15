@@ -1,3 +1,4 @@
+// live at https://epeli.github.io/react-simple/
 import React from "react";
 import ReactDOM from "react-dom";
 
