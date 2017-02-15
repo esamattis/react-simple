@@ -2,13 +2,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import simple, {View} from "react-simple";
+import simple from "react-simple";
 
 const shade0 = "#657A99";
 const shade1 = "#A5B1C1";
 const shade2 = "#8191A9";
 const shade3 = "#4B6388";
 const shade4 = "#304C75";
+
+// a flexbox View like in react-native
+const View = simple("div", {
+    boxSizing: "border-box",
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
+    flexShrink: 0,
+    alignContent: "flex-start",
+    border: 0,
+    margin: 0,
+    padding: 0,
+    minWidth: 0,
+});
 
 const Container = simple(View, {
     position: "absolute",
