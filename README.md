@@ -50,6 +50,9 @@ const RedLink = simple(Link, {
 // <Link to="/hello">Hello</Link>
 ```
 
+here's some [example code](https://github.com/epeli/react-simple/blob/master/demo/index.js) using it
+
+
 The css-in-js engine is [glamor][] which means following features:
 
 - automatic vendor prefixes
