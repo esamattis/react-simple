@@ -66,6 +66,11 @@ glamor `css`function can be imported with `import {css} from "react-simple"` whe
 
 [glamor]: https://github.com/threepointone/glamor
 
+# react-native
+
+To use in React Native import `simple` from `react-simple/native`. Anything can be passed
+as styles what can be passed to `StyleSheet.create()`.
+
 # style attribute
 
 To put styles in the style attribute import `simple` from `react-simple/inline`
