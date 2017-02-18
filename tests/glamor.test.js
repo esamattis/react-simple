@@ -1,5 +1,5 @@
 import React from "react";
-import simple from "../src/simple";
+import simple from "../src/dom";
 import {css} from "glamor";
 import renderer from "react-test-renderer";
 

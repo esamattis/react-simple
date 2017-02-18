@@ -3,7 +3,7 @@
     "plugins": [
         ["./babel.js", {
             "modules": {
-                "./src/simple": {
+                "./src/dom": {
                     "default": true
                 }
             }
