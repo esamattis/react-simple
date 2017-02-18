@@ -1,0 +1,9 @@
+exports[`glamor backend renders class name 1`] = `
+<button
+  className="Button___1 glamor-generated-class-name" />
+`;
+
+exports[`glamor backend renders the alt class 1`] = `
+<button
+  className="Button___4 red___4 glamor-generated-class-name" />
+`;
