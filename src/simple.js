@@ -22,7 +22,9 @@ var compnentCounter = 0;
 function simple(Component, styles, alts = {}) {
     const num = compnentCounter++;
     const makeDebugClass = className =>
-        className && !defaultNamePat.test(className) ? className + "___" + num : null;
+        className && !defaultNamePat.test(className)
+            ? className + "___" + num
+            : null;
 
     if (Component._styleWrapped) {
         return simple(
