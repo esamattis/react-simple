@@ -17,6 +17,7 @@
   },
   "files": [
     "babel.js",
+    "inline.js",
     "lib"
   ],
   "author": "Esa-Matti Suuronen",
