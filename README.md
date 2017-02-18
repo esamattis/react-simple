@@ -66,6 +66,28 @@ glamor `css`function can be imported with `import {css} from "react-simple"` whe
 
 [glamor]: https://github.com/threepointone/glamor
 
+# style attribute
+
+To put styles in the style attribute import `simple` from `react-simple/inline`
+
+```js
+import simple from "react-simple/inline";
+
+const Box = simple("div", {
+    padding: 10,
+    border: "1px solid black",
+});
+```
+
+Generally this should not be used but there is one important use case: HTML Emails.
+
+To render a HTML template use [ReactDOMServer](https://facebook.github.io/react/docs/react-dom-server.html)
+
+```js
+import ReactDOMServer from "react-dom/server";
+const html = ReactDOMServer.renderToStaticMarkup(<Box>hello email</Box>);
+```
+
 # babel plugin
 
 > This is totally optional!
