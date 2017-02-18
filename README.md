@@ -71,6 +71,16 @@ glamor `css`function can be imported with `import {css} from "react-simple"` whe
 To use in React Native import `simple` from `react-simple/native`. Anything can be passed
 as styles what can be passed to `StyleSheet.create()`.
 
+```js
+import {View} from "react-native";
+import simple from "react-simple/native";
+
+const Box = simple(View, {
+    flex: 1,
+    border: "1px solid black",
+});
+```
+
 # style attribute
 
 To put styles in the style attribute import `simple` from `react-simple/inline`
