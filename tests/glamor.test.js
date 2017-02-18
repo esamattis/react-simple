@@ -108,4 +108,56 @@ describe("glamor backend", () => {
             borderRadius: 10,
         });
     });
+
+    test("deeply merges extended styles", () => {
+        const Button = simple("button", {
+            padding: 10,
+            ":hover": {
+                color: "red",
+            },
+        });
+
+        const RoundButton = simple(Button, {
+            borderRadius: 10,
+            ":hover": {
+                color: "blue",
+            },
+        });
+        RoundButton; // eslint-disable-line
+
+        expect(css).lastCalledWith({
+            padding: 10,
+            borderRadius: 10,
+            ":hover": {
+                color: "blue",
+            },
+        });
+    });
+
+    test("deeply merges alt styles", () => {
+        const Button = simple(
+            "button",
+            {
+                padding: 10,
+                ":hover": {
+                    color: "red",
+                },
+            },
+            {
+                alt: {
+                    ":hover": {
+                        color: "blue",
+                    },
+                },
+            },
+        );
+        Button; // eslint-disable-line
+
+        expect(css).lastCalledWith({
+            padding: 10,
+            ":hover": {
+                color: "blue",
+            },
+        });
+    });
 });
