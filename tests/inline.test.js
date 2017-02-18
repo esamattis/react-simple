@@ -12,6 +12,7 @@ describe("inline backend", () => {
         const tree = renderer.create(<Button />).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
     test("passes custom class names", () => {
         const Button = simple("button", {
             padding: 10,
