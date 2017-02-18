@@ -107,7 +107,9 @@ const Root = () => (
             <Row>
                 <Link href="https://github.com/epeli/react-simple">github</Link>
                 <Sep />
-                <Link href="https://www.npmjs.com/package/react-simple">npm</Link>
+                <Link href="https://www.npmjs.com/package/react-simple">
+                    npm
+                </Link>
             </Row>
         </Box>
     </Container>
