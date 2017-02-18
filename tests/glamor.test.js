@@ -21,6 +21,17 @@ describe("glamor backend", () => {
         expect(tree).toMatchSnapshot();
     });
 
+    test("passes custom class names", () => {
+        const Button = simple("button", {
+            padding: 10,
+        });
+
+        const tree = renderer
+            .create(<Button className="custom-class-name" />)
+            .toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
     test("is called with the style definition", () => {
         const Button = simple("button", {
             padding: 10,
