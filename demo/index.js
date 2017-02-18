@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import simple from "react-simple";
+import simple from "react-simple/inline";
 
 const shade0 = "#657A99";
 const shade1 = "#A5B1C1";

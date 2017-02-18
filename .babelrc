@@ -5,6 +5,9 @@
             "modules": {
                 "./src/glamor": {
                     "default": true
+                },
+                "./src/inline": {
+                    "default": true
                 }
             }
         }],
