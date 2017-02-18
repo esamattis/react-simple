@@ -1,7 +1,13 @@
 {
     "presets": ["es2015", "react"],
     "plugins": [
-        "./babel.js",
+        ["./babel.js", {
+            "modules": {
+                "./src/simple": {
+                    "default": true
+                }
+            }
+        }],
         "syntax-object-rest-spread",
         "transform-object-rest-spread"
     ]
