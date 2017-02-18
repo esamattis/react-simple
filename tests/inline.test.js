@@ -24,6 +24,17 @@ describe("inline backend", () => {
         expect(tree).toMatchSnapshot();
     });
 
+    test("passes custom styles ", () => {
+        const Button = simple("button", {
+            padding: 10,
+        });
+
+        const tree = renderer
+            .create(<Button style={{color: "red"}} />)
+            .toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
     test("passes custom class names", () => {
         const Button = simple("button", {
             padding: 10,
