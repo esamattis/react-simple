@@ -1,0 +1,49 @@
+exports[`native backend deeply merges extended styles 1`] = `
+<View
+  style={
+    Object {
+      "base": Object {
+        ":hover": Object {
+          "color": "blue",
+        },
+        "borderRadius": 10,
+        "padding": 10,
+      },
+    }
+  } />
+`;
+
+exports[`native backend is called with the alt style definition 1`] = `
+<View
+  style={
+    Object {
+      "base": Object {
+        "backgroundColor": "red",
+        "padding": 10,
+      },
+    }
+  } />
+`;
+
+exports[`native backend is called with the extended styles 1`] = `
+<View
+  style={
+    Object {
+      "base": Object {
+        "borderRadius": 10,
+        "padding": 10,
+      },
+    }
+  } />
+`;
+
+exports[`native backend renders styles 1`] = `
+<View
+  style={
+    Object {
+      "base": Object {
+        "padding": 10,
+      },
+    }
+  } />
+`;
