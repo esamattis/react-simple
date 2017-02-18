@@ -81,4 +81,20 @@ describe("glamor backend", () => {
         const tree = renderer.create(<RoundButton />).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    test("is called with the extended styles", () => {
+        const Button = simple("button", {
+            padding: 10,
+        });
+
+        const RoundButton = simple(Button, {
+            borderRadius: 10,
+        });
+        RoundButton; // eslint-disable-line
+
+        expect(css).lastCalledWith({
+            padding: 10,
+            borderRadius: 10,
+        });
+    });
 });
