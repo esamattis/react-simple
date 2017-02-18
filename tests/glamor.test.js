@@ -69,4 +69,16 @@ describe("glamor backend", () => {
         const tree = renderer.create(<Button red />).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    test("renders extended component name", () => {
+        const Button = simple("button", {
+            padding: 10,
+        });
+        const RoundButton = simple(Button, {
+            borderRadius: 10,
+        });
+
+        const tree = renderer.create(<RoundButton />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 });
