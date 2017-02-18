@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import simple from "react-simple/inline";
+import simple from "react-simple";
 
 const shade0 = "#657A99";
 const shade1 = "#A5B1C1";
@@ -37,12 +37,14 @@ const Container = simple(View, {
 });
 
 const Box = simple(View, {
-    padding: 20,
+    padding: 30,
     alignItems: "center",
     justifyContent: "space-around",
     backgroundColor: shade1,
-    minWidth: 400,
-    minHeight: 350,
+    "@media (min-width: 450px)": {
+        minWidth: 450,
+    },
+    minHeight: 400,
 });
 
 const Text = simple(View.create("span"), {
@@ -56,6 +58,7 @@ const Title = simple(Text, {
 });
 
 const Description = simple(Text, {
+    textAlign: "center",
     fontSize: 20,
     color: shade0,
 });
@@ -100,7 +103,7 @@ const Root = () => (
         <Box>
             <Title>react-simple</Title>
             <Description>
-                simple style only components for react
+                simple style only components<br />for the web & native
             </Description>
             <Code title="<Button>click</Button>">{code}</Code>
 

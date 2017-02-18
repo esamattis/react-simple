@@ -1,6 +1,6 @@
 # react-simple
 
-simple style only components for react
+simple style only components for the web & native
 
 install
 
