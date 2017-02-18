@@ -3,7 +3,7 @@
     "plugins": [
         ["./babel.js", {
             "modules": {
-                "./src/dom": {
+                "./src/glamor": {
                     "default": true
                 }
             }
