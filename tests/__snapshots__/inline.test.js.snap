@@ -8,6 +8,16 @@ exports[`inline backend passes custom class names 1`] = `
   } />
 `;
 
+exports[`inline backend passes custom classes  1`] = `
+<button
+  className="Button___1 custom-class-name"
+  style={
+    Object {
+      "padding": 10,
+    }
+  } />
+`;
+
 exports[`inline backend renders style attribute and debug class name 1`] = `
 <button
   className="Button___0"
