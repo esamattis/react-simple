@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`native backend deeply merges extended styles 1`] = `
 <View
   style={
@@ -10,7 +12,8 @@ exports[`native backend deeply merges extended styles 1`] = `
         "padding": 10,
       },
     }
-  } />
+  }
+/>
 `;
 
 exports[`native backend is called with the alt style definition 1`] = `
@@ -22,7 +25,8 @@ exports[`native backend is called with the alt style definition 1`] = `
         "padding": 10,
       },
     }
-  } />
+  }
+/>
 `;
 
 exports[`native backend is called with the extended styles 1`] = `
@@ -34,7 +38,8 @@ exports[`native backend is called with the extended styles 1`] = `
         "padding": 10,
       },
     }
-  } />
+  }
+/>
 `;
 
 exports[`native backend renders styles 1`] = `
@@ -45,5 +50,6 @@ exports[`native backend renders styles 1`] = `
         "padding": 10,
       },
     }
-  } />
+  }
+/>
 `;

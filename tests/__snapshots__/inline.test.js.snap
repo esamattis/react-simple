@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`inline backend passes custom class names 1`] = `
 <button
   className="Button___3 custom-class-name"
@@ -5,7 +7,8 @@ exports[`inline backend passes custom class names 1`] = `
     Object {
       "padding": 10,
     }
-  } />
+  }
+/>
 `;
 
 exports[`inline backend passes custom classes  1`] = `
@@ -15,7 +18,8 @@ exports[`inline backend passes custom classes  1`] = `
     Object {
       "padding": 10,
     }
-  } />
+  }
+/>
 `;
 
 exports[`inline backend passes custom styles  1`] = `
@@ -26,7 +30,8 @@ exports[`inline backend passes custom styles  1`] = `
       "color": "red",
       "padding": 10,
     }
-  } />
+  }
+/>
 `;
 
 exports[`inline backend renders style attribute and debug class name 1`] = `
@@ -36,7 +41,8 @@ exports[`inline backend renders style attribute and debug class name 1`] = `
     Object {
       "padding": 10,
     }
-  } />
+  }
+/>
 `;
 
 exports[`inline backend renders the alt styles and debug class 1`] = `
@@ -47,7 +53,8 @@ exports[`inline backend renders the alt styles and debug class 1`] = `
       "backgroundColor": "red",
       "padding": 10,
     }
-  } />
+  }
+/>
 `;
 
 exports[`inline backend renders the combined styles for extended components 1`] = `
@@ -58,5 +65,6 @@ exports[`inline backend renders the combined styles for extended components 1`] 
       "borderRadius": 10,
       "padding": 10,
     }
-  } />
+  }
+/>
 `;
