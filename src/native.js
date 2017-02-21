@@ -1,20 +1,19 @@
 import React from "react";
 // eslint-disable-next-line import/no-unresolved
 import {StyleSheet} from "react-native";
+import flattenDeep from "lodash/fp/flattenDeep";
 import createSimple from "./core";
 
-const simple = createSimple(styles => StyleSheet.create({base: styles}), (
-    self,
-    Component,
-    rule,
-    {style, ...otherProps},
-) => {
+const createStylesheets = styles =>
+    styles.map(style => StyleSheet.create({base: style}).base);
+
+const render = (self, Component, rule, {style, ...otherProps}) => {
     const props = {
         ...otherProps,
-        style: style ? [rule.base, style] : rule.base,
+        style: flattenDeep([rule, style]).filter(Boolean),
     };
 
     return <Component {...props} />;
-});
+};
 
-export default simple;
+export default createSimple(createStylesheets, render);
