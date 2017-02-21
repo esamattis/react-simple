@@ -1,6 +1,8 @@
 import omit from "lodash/fp/omit";
 import pick from "lodash/fp/pick";
 import pickBy from "lodash/fp/pickBy";
+import flattenDeep from "lodash/fp/flattenDeep";
+import mapValues from "lodash/mapValues";
 import deepmerge from "deepmerge";
 
 const pickTruthty = pickBy(Boolean);
@@ -13,22 +15,38 @@ function getDisplayName(Component) {
     return Component.displayName || Component.name || "Anonymous";
 }
 
+function mergeAlts(parent, current) {
+    const alts = {};
+
+    Object.keys(parent).forEach(key => {
+        alts[key] = parent[key];
+    });
+
+    Object.keys(current).forEach(key => {
+        alts[key] = flattenDeep([alts[key], current[key]]).filter(Boolean);
+    });
+
+    return alts;
+}
+
 const createSimple = (createRule, render) =>
     function simple(Component, styles, alts = {}) {
         if (Component._styleWrapped) {
+            const parentAlts = Component._styleWrapped.alts;
+
             return simple(
                 Component._styleWrapped.Component,
-                deepmerge(Component._styleWrapped.styles, styles),
-                deepmerge(Component._styleWrapped.alts, alts),
+                flattenDeep([Component._styleWrapped.styles, styles]),
+                mergeAlts(parentAlts, alts),
             );
         }
 
-        const rules = {__base: createRule(styles)};
+        const rules = {__base: createRule(flattenDeep([styles]))};
 
         const altProps = Object.keys(alts);
 
         for (let key in alts) {
-            rules[key] = createRule(deepmerge(styles, alts[key]));
+            rules[key] = createRule(flattenDeep([styles, alts[key]]));
         }
 
         function Simple(props) {

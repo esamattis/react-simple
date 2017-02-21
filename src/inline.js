@@ -6,7 +6,10 @@ import createSimple from "./core";
 const defaultNamePat = /^simple\(.*\)/;
 var counter = 0;
 
-const simple = createSimple(style => style, (
+const combineStyles = styles =>
+    styles.reduce((acc, style) => Object.assign(acc, style), {});
+
+const render = (
     self,
     Component,
     rule,
@@ -36,6 +39,6 @@ const simple = createSimple(style => style, (
     };
 
     return <Component {...props} />;
-});
+};
 
-export default simple;
+export default createSimple(combineStyles, render);
