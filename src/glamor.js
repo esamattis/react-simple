@@ -34,6 +34,8 @@ const simple = createSimple(css, (
     return <Component {...props} />;
 });
 
+// This is experimental API. Do not use!
+// A div which mirrors the View component in React Native
 const viewStyles = {
     boxSizing: "border-box",
     position: "relative",
@@ -42,13 +44,10 @@ const viewStyles = {
     alignItems: "stretch",
     flexShrink: 0,
     alignContent: "flex-start",
-    border: 0,
-    margin: 0,
-    padding: 0,
     minWidth: 0,
 };
-
 export const View = simple("div", viewStyles);
 View.displayName = "View";
+
 export {css};
 export default simple;
