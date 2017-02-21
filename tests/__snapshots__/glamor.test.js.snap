@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`glamor backend renders class name custom classname 1`] = `
+<button
+  className="Button___0 custom-class-name css-1amtj6d"
+/>
+`;
