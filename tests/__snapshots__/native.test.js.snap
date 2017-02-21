@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`native backend is called with the alt style definition 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "padding": 10,
+      },
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`native backend is called with the extended styles 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "padding": 10,
+      },
+      Object {
+        "borderRadius": 10,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`native backend renders styles 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "padding": 10,
+      },
+    ]
+  }
+/>
+`;
