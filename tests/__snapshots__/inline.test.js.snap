@@ -2,7 +2,7 @@
 
 exports[`inline backend passes custom class names 1`] = `
 <button
-  className="Button___3 custom-class-name"
+  className="Button__ custom-class-name"
   style={
     Object {
       "padding": 10,
@@ -13,7 +13,7 @@ exports[`inline backend passes custom class names 1`] = `
 
 exports[`inline backend passes custom classes  1`] = `
 <button
-  className="Button___1 custom-class-name"
+  className="Button__ custom-class-name"
   style={
     Object {
       "padding": 10,
@@ -24,7 +24,7 @@ exports[`inline backend passes custom classes  1`] = `
 
 exports[`inline backend passes custom styles  1`] = `
 <button
-  className="Button___2"
+  className="Button__"
   style={
     Object {
       "color": "red",
@@ -36,7 +36,7 @@ exports[`inline backend passes custom styles  1`] = `
 
 exports[`inline backend renders style attribute and debug class name 1`] = `
 <button
-  className="Button___0"
+  className="Button__"
   style={
     Object {
       "padding": 10,
@@ -47,7 +47,7 @@ exports[`inline backend renders style attribute and debug class name 1`] = `
 
 exports[`inline backend renders the alt styles and debug class 1`] = `
 <button
-  className="Button___4 red___4"
+  className="Button__ red__"
   style={
     Object {
       "backgroundColor": "red",
@@ -59,7 +59,7 @@ exports[`inline backend renders the alt styles and debug class 1`] = `
 
 exports[`inline backend renders the combined styles for extended components 1`] = `
 <button
-  className="RoundButton___5"
+  className="RoundButton__"
   style={
     Object {
       "borderRadius": 10,

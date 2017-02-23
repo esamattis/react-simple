@@ -2,6 +2,6 @@
 
 exports[`glamor backend renders class name custom classname 1`] = `
 <button
-  className="Button___0 custom-class-name css-1amtj6d"
+  className="Button__ custom-class-name css-1amtj6d"
 />
 `;

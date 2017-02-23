@@ -5,7 +5,6 @@ import {css} from "glamor";
 import createSimple from "./core";
 
 const defaultNamePat = /^simple\(.*\)/;
-var counter = 0;
 
 const simple = createSimple(css, (
     self,
@@ -14,12 +13,8 @@ const simple = createSimple(css, (
     {className, ...otherProps},
     altStyleName,
 ) => {
-    const num = counter++;
-
     const makeDebugClass = className =>
-        className && !defaultNamePat.test(className)
-            ? className + "___" + num
-            : null;
+        className && !defaultNamePat.test(className) ? className + "__" : null;
 
     const props = {
         ...otherProps,
