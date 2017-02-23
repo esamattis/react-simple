@@ -1,6 +1,6 @@
 {
   "name": "react-simple",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "simple style only components for the web & native",
   "main": "./lib/glamor",
   "scripts": {
