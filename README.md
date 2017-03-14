@@ -51,7 +51,7 @@ const RedLink = simple(Link, {
 ```
 
 here's some [example code](https://github.com/epeli/react-simple/blob/master/demo/index.js) using it
-and here's [real app](https://github.com/skydivejkl/hyppykeli.fi) using.
+and here's a [real app](https://github.com/skydivejkl/hyppykeli.fi) using.
 
 
 The css-in-js engine is [glamor][] which means following features:
