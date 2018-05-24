@@ -1,3 +1,5 @@
+DEPRECATED! Use [Emotion](https://emotion.sh/docs/object-styles) with Object Styles. Although the inline tool in this can be usefull still.
+
 # react-simple
 
 simple style only components for the web & native
