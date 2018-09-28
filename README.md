@@ -2,6 +2,8 @@ DEPRECATED! Use [Emotion](https://emotion.sh/docs/object-styles) with Object Sty
 
 # react-simple
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/epeli/react-simple.svg)](https://greenkeeper.io/)
+
 simple style only components for the web & native
 
 install
